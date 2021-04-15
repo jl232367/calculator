@@ -1,0 +1,61 @@
+/*.container {
+    height: 500px;
+    width: 500px;
+}
+*/
+.opBtnGrid {
+    height: 100px;
+    width: 500px;
+    display: flex;
+    flex: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.opBtn {
+    width: 23%;
+    height: 98%;
+    border-width: 1%;
+    border-color: black;
+    border-style: solid;
+    text-align: center;
+}
+.grid {
+    height: 500px;
+    width: 500px;
+    display: flex;
+    flex: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.numberBtn {
+    width: 31%;
+    height: 33%;
+    border-width: 1%;
+    border-color: black;
+    border-style: solid;
+    text-align: center;
+}
+
+#zero {
+    
+    width: 31%;
+    text-align: center;
+}
+
+.clear { 
+    width: 31%;
+    height: 33%;
+    border-width: 1%;
+    border-color: black;
+    border-style: solid;
+    text-align: center;
+}
+.equals {
+    width: 31%;
+    height: 33%;
+    border-width: 1%;
+    border-color: black;
+    border-style: solid;
+    text-align: center;
+}
