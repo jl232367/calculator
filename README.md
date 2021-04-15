@@ -1,0 +1,1 @@
+This is a project to work on building a calculator using HTML/CSS and JS. 
