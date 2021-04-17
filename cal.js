@@ -18,7 +18,7 @@ ops.forEach((opBtn) => {
             opVal = opBtn.textContent;
         } else {
             opVal = opBtn.textContent;
-            secondNumb = "";
+            
             displayView.innerHTML = Number(firstNumb);
         }
         //If there is already a value in opval I should execute the operate function and set the new display value to the product
@@ -26,20 +26,25 @@ ops.forEach((opBtn) => {
         //display = display. + opBtn.textContent;
         //let displayView = document.querySelector('#display');
         //displayView.innerHTML = display;
-        
+        secondNumb = "";
     });
 });
 numbs.forEach((numberBtn) => {
     numberBtn.addEventListener('click', () => {
         let displayView = document.querySelector('#display');
-        if (opVal === "+" || opVal === "-" || opVal === "*" || opVal === "/") {
-            secondNumb = secondNumb + numberBtn.textContent;
-            displayView.innerHTML = Number(secondNumb);
-        } else {
-            firstNumb = firstNumb + numberBtn.textContent;
-            displayView.innerHTML = Number(firstNumb);
-            // console.log(numberBtn.textContent);
-        }
+        
+            
+            if (opVal === "+" || opVal === "-" || opVal === "*" || opVal === "/") {
+                //secondNumb = "";
+                secondNumb = secondNumb + numberBtn.textContent;
+                displayView.innerHTML = Number(secondNumb);
+            } else {
+                firstNumb = firstNumb + numberBtn.textContent;
+                displayView.innerHTML = Number(firstNumb);
+                // console.log(numberBtn.textContent);
+            }
+        
+        
         
     });
 });
@@ -52,9 +57,11 @@ equalBtn.addEventListener('click', () => {
 const clear = document.querySelector('.clear');
 
 clear.addEventListener('click', () => {
-    display = "";
+    firstNumb = "";
+    secondNumb = "";
+    opVal = "";
     let displayView = document.querySelector('#display')
-    displayView.innerHTML = display;
+    displayView.innerHTML = 0;
 });
 
 function operate(exp,num1,num2) {
