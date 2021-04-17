@@ -3,6 +3,12 @@
     width: 500px;
 }
 */
+
+#display {
+    height: 50px;
+    max-width: 500px;
+    background-color: burlywood;
+}
 .opBtnGrid {
     height: 100px;
     width: 500px;
