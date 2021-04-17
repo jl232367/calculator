@@ -11,7 +11,9 @@ const equalBtn = document.querySelector('.equals');
 
 ops.forEach((opBtn) => {
     opBtn.addEventListener('click', () => {
-        if (Number(firstNumb) >= 0 && Number(secondNumb) >= 0 && (opVal === "+" || opVal === "-" || opVal === "*" || opVal === "/")) {
+        if (Number(firstNumb) >= 0 && Number(secondNumb) === 0 &&  opVal === "/") {
+            alert("NO DIVIDING BY ZERO ON MY INTERNET!!!!");
+        } else if (Number(firstNumb) >= 0 && Number(secondNumb) >= 0 && (opVal === "+" || opVal === "-" || opVal === "*" || opVal === "/")) {
             firstNumb = operate(opVal,Number(firstNumb),Number(secondNumb));
             let displayView = document.querySelector('#display');
             displayView.innerHTML = Number(firstNumb);
@@ -49,8 +51,16 @@ numbs.forEach((numberBtn) => {
     });
 });
 equalBtn.addEventListener('click', () => {
-    let displayView = document.querySelector('#display')
-    displayView.innerHTML = operate(opVal,Number(firstNumb),Number(secondNumb));
+    if (Number(firstNumb) >= 0 && Number(secondNumb) === 0 &&  opVal === "/") {
+        alert("NO DIVIDING BY ZERO ON MY INTERNET!!!!");
+    } else if (Number(firstNumb) >= 0 && Number(secondNumb) >= 0 && (opVal === "+" || opVal === "-" || opVal === "*" || opVal === "/")) {
+        let displayView = document.querySelector('#display')
+        displayView.innerHTML = operate(opVal,Number(firstNumb),Number(secondNumb));
+    } else {
+        alert("You need to complete the expression!")
+    }
+    //let displayView = document.querySelector('#display')
+    //displayView.innerHTML = operate(opVal,Number(firstNumb),Number(secondNumb));
 });
 
 
